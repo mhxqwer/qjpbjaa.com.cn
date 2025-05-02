@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>北京画院</title>
+    <link type="text/css" rel="stylesheet" href="static/css/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="static/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="static/css/datetime.css"/>
+                        <link type="text/css" rel="stylesheet" href="static/css/two.css"/>
+                        <script type="text/javascript" src="static/js/jquery3.6.0.js"></script>
+    <script src="static/js/jquery-ui.js" type=""></script>
+    <script type="text/javascript" src="static/js/slides.min.jquery.js"></script>
+    <script type="text/javascript" src="static/js/jquery.select.js"></script>
+    <script type="text/javascript" src="static/js/tab.js"></script>
+    <script type="text/javascript" src="static/js/swfobject.js"></script>
+    <script type="text/javascript" src="static/js/hotpic.js"></script>
+    <script type="text/javascript" src="static/js/jquery.truncatable.js"></script>
+    <script language="javascript" type="text/javascript" src="static/js/wdatepicker.js"></script>
+    
+    <script type="text/javascript" src="static/js/images.js"></script>
+    <!--20140806添加-->
+    <script type="text/javascript" src="static/js/bigpicroll.js"></script>
+    <style type="">
+        .backToTop {
+            width: 54px;
+            height: 85px;
+            line-height: 1.2;
+            color: #333;
+            font-size: 12px;
+            text-align: center;
+            position: fixed;
+            _position: absolute;
+            left: 50%;
+            margin-left: 505px;
+            top: 162px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .backToTop img {
+            width: 53px;
+            height: 33px;
+        }
+
+        .backToTop div {
+            height: 18px;
+            border: 1px solid #d4d4d4;
+            padding-top: 5px;
+            margin-top: 2px;
+            background-color: #fff;
+            color: #333;
+            display: block;
+            zoom: 1;
+        }
+
+        .backToTop span div {
+            width: 23px;
+            height: 157px;
+            float: left;
+            margin: 1px;
+            zoom: 1;
+        }
+
+        .backToTop a {
+            color: #333;
+            zoom: 1;
+        }
+
+        #gotop_lan_ch a{
+            color: #990000;
+            font-stretch: normal;
+        }
+
+        .switch_lang{
+            width: 200px;
+            height: 85px;
+            line-height: 1.2;
+            color: #333;
+            font-size: 12px;
+            text-align: center;
+            position: absolute;
+            z-index: 999;
+            top: 40px;
+            right: 0;
+        }
+        .switch_lang span {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            padding: 23px 30px;
+        }
+        .switch_lang div {
+            height: 18px;
+            border: 1px solid #d4d4d4;
+            padding-top: 5px;
+            margin-top: 2px;
+            background-color: #fff;
+            color: #333;
+            display: block;
+            zoom: 1;
+            float: right;
+            width: 54px;
+        }
+
+    </style>
+    <script type="">
+        $(document).ready(function () {
+            $('.sel_zz').imgFlash({
+                selectBox: '.sel_zz',//定义要包含的主体区域
+                selectIDmain: '#sel_zz',//定义要获取的下拉框ID
+                selectMain: '<div id="Select11"></div>'//定义下拉主题
+            });
+            $('.sel_pl').imgFlash({
+                selectBox: '.sel_pl',//定义要包含的主体区域
+                selectIDmain: '#sel_pl',//定义要获取的下拉框ID
+                selectMain: '<div id="Select22"></div>'//定义下拉主题
+            });
+            $('.sel_strat').imgFlash({
+                selectBox: '.sel_strat',//定义要包含的主体区域
+                selectIDmain: '#sel_strat',//定义要获取的下拉框ID
+                selectMain: '<div id="Select33"></div>'//定义下拉主题
+            });
+            $('.sel_end').imgFlash({
+                selectBox: '.sel_end',//定义要包含的主体区域
+                selectIDmain: '#sel_end',//定义要获取的下拉框ID
+                selectMain: '<div id="Select44"></div>'//定义下拉主题
+            });
+        });
+
+        // <div> <a href="http://www.bjaa.com.cn/chiefly.html?hcs=1&clg=2">中文</a> </div>
+        // 回到顶部
+        (function () {
+            var $backToTopTxt = "",
+                $backToTopEle = $('<div class="backToTop"><img class="toTopImg" src="static/picture/gotop.jpg"/><span><div style="height:115px;"><a href="/chiefly.html?hcs=11" target="_blank">北京画院美术馆</a></div><div style="height:115px;"><a href="/chiefly.html?hcs=136" target="_blank">齐白石旧居纪念馆</a></div><div><a href="/chiefly.html?hcs=125" target="_blank">齐白石艺术国际研究中心</a></div><div><a href="/chiefly.html?hcs=73" target="_blank">传统中国绘画研究中心</a></div></span></div>').appendTo($("body")).attr("title", $backToTopTxt),
+                $backToTopFun = function () {
+                    var st = $(document).scrollTop(),
+                        winh = $(window).height();
+                    //(st > 0)? $backToTopEle.show(): $backToTopEle.hide();
+                    //IE6下的定位
+                    if (!window.XMLHttpRequest) {
+                        $backToTopEle.css("top", st + winh - 166);
+                    }
+                };
+            $('.backToTop img').click(function () {
+                $("html, body").animate({scrollTop: 0}, 120);
+            });
+            //$(window).bind("scroll", $backToTopFun);
+            $(function () {
+                $backToTopFun();
+            });
+        })();
+
+    </script>
+</head>
+<body>
+
+<div id="bigbg" style="position:relative;display:block;">
+    <div class="mw1000 header">
+        <a href="/chiefly.html?hcs=1"
+           class="logo"
+           title="北京画院"></a>
+                <div class="banner banner_painter">
+            <div class="switch_lang">
+                <span>
+                    <div id="gotop_lan_en">
+                        <a href="http://english.bjaa.com.cn/?hcs=1&amp;clg=2" style="color:#333;">English</a>
+                    </div>
+                <div id="gotop_lan_ch">
+                    <a href="http://www.bjaa.com.cn/chiefly.html?hcs=1&amp;clg=2">中文</a>
+                </div>
+                </span>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                                    <li class=" wu"><a href="/chiefly.html?hcs=1&clg=2"
+                                                 >首页</a>
+                    </li>
+                                        <li class=""><a href="/block.html?hcs=1&clg=4"
+                                                 >画院概况</a>
+                    </li>
+                                        <li class=""><a href="/news.html?hcs=1&clg=3"
+                                                 >新闻资讯</a>
+                    </li>
+                                        <li class="current"><a href="/artist.html?hcs=1&clg=5"
+                                                 >创作与研究</a>
+                    </li>
+                                        <li class=""><a href="/artist.html?hcs=1&clg=6"
+                                                 >精品典藏</a>
+                    </li>
+                                        <li class=""><a href="/block.html?hcs=1&clg=7"
+                                                 >培训动态</a>
+                    </li>
+                                        <li class=""><a href="/news.html?hcs=1&clg=8"
+                                                 >学术成果</a>
+                    </li>
+                                        <li class=""><a href="/news.html?hcs=1&clg=218"
+                                                 >理论学习</a>
+                    </li>
+                                </ul>
+                    </div>
+    </div>
+
+<div class="mw1000 main">
+<script type="text/javascript">
+$(function(){
+	$('#articleIntroStr').truncaString({
+                        length: 350,
+                        hideClue: true,
+                        isHide: true,
+                        moreText:"展开",
+                        hideText:"收起",
+                        boundary: /^(\s|\u002c|\u002e|[\u4E00-\u9FA5])+$/
+                    });
+
+	})
+</script>
+<!--左侧导航-->
+
+<div class="sidebar">
+
+    <ul>
+
+      
+      <li class=""><a href="/artist.html?hcs=1&clg=81">现任画家</a></li>
+
+      
+      <li class="current"><a href="/artist.html?hcs=1&clg=82">历任画家</a></li>
+
+      
+      <li class=" wu"><a href="/artist.html?hcs=1&clg=208">理论研究员</a></li>
+
+      
+    </ul>
+
+</div>
+  <!--右侧内容-->
+  <div class="rightcontent">
+    <div class="address"> <a href="index.html">首页</a> &gt; <a href="/artist.html?hcs=1&clg=5">创作与研究</a> &gt; <a href="/artist.html?hcs=1&clg=82">历任画家</a> &gt; 齐白石(已故) </div>
+
+	<div class="tcollection tcollection_a">
+    	<h2 class="h2"><strong>齐白石(已故)</strong></h2>
+	    <div class="pastpainter">
+	    	<div class="pastpainter_l" style="min-height:200px;">
+	    		<p id="articleIntroStr">
+	齐白石（1864&mdash;&mdash;1957），原名纯芝，号渭青、兰亭，后改名璜，号濒生，别号白石、白石老人，别署杏子坞老民、星塘老屋后人、借山吟馆主者、寄萍、齐大、木居全、湘上老农、三百石印富翁等。湖南湘潭人。家贫寒，少时读书一年，牧牛砍柴之余读书心画。1877年做木匠学徒，次年改学雕花木工，曾习摹《芥子园画传》并据以作雕花新样。1888年起始学画，曾任龙山诗社社长。1902年起，出游陕西、北京、江西、广东、广西。七年间&ldquo;五出五归&rdquo;，得见名山大川，画风由工转写，书法由何绍基体转学魏碑，篆刻由丁、黄一路改学赵之谦体。1917年二进北京，结识陈师曾、姚茫父等，次年返湖南。1919年定居北京，始行变法。1926年任教于国立北平艺术专门学校。抗日战争期间，表示&ldquo;画不卖与官家&rdquo;。1946年重操卖画治印生涯，同年赴 南京、上海举办个展，并任北平艺专名誉教授。1952年聘为中央美术学院名誉教授。历任中国美术家协会主席，中央文史馆研究馆员，北京中国画研究会主席，北京中国画院名誉院长。曾当选第一届全国人大代表。1953年中央文化授予&ldquo;人民艺术家&rdquo;称号。1955年德意志民主共和国艺术科学院授予通讯院士荣誉状。1956年获世界和平理事会1955年度国际和平奖金。1963年被世界和平理事会推举为世界文化名人。著有《借山吟馆诗草》、《白石诗草》、《白石老人自传》等。出版有《齐白石全集》等各种画集近百种。
+</p>
+	    		<p id="articleIntroStr">
+齐金平(1922-2009)， 湖南湘潭县人，系国画巨匠齐白石的嫡孙，原任齐白石艺术研究会副会长。齐白石的原名是‌齐纯芝‌。他后来改名为璜，字濒生，号白石、白石山翁等，白石老人对于三孙齐金平爱待和期望，初期给他起笔名:齐秉芝，秉字是他这一嫡孙辈分中的秉字，芝是白石老人的原名，未来期望是对于齐金平能够像白石老人一样的成就，所以起名为笔名:齐秉芝，原名:齐金平，是中国近现代著名的绘画大师和书法篆刻家。</p>
+	    		<div class="clear"></div>
+	    	</div>
+	    	<div class="pastpainter_r" style="margin-right:40px;">
+	      		<img src="static/picture/qbstx.jpg" width="150" height="150">
+	      		<p style="text-align:center;"><!-- <a href="http://artso.artron.net/artist/search_artist.php?keyword=%E9%BD%90%E7%99%BD%E7%9F%B3" target="_blank">[扩展阅读]</a> --></p>
+	      	</div>
+	      	<div class="clear"></div>
+		    <div class="pastpainter_list showphodiv" style="border-top:1px dotted #333;">
+		      	<ul style="margin:0px auto;width:430px;">
+		      				<li class="current">
+		<a>
+			<img src="static/picture/qbszp2.jpg" datu="http://static.bjaa.com.cn/bjhy/images/lirenhuajiazuopin/yiguhuajia/qbs/qbszp2.jpg" onload="resizeImage(this, 206, 206);">
+		</a>
+		<p>枯荷 <br><a class=""> <span>137.5×47 </span></a></p>
+		<div style="display:none;">枯荷 <br><a class=""> <span>137.5×47 </span></a></div>
+		</li>
+		      				<li>
+		<a>
+			<img src="static/picture/qbszp1.jpg" datu="http://static.bjaa.com.cn/bjhy/images/lirenhuajiazuopin/yiguhuajia/qbs/qbszp1.jpg" onload="resizeImage(this, 206, 206);">
+		</a>
+		<p>虾图 <br><a class=""> <span>137×33.5  </span></a></p>
+		<div style="display:none;">虾图 <br><a class=""> <span>137×33.5  </span></a></div>
+		</li>
+		      						</ul>
+			</div>
+	      <div class="clear"></div>
+	    </div>
+    </div>
+  </div>
+ <div class="clear"></div>
+</div>
+<!--友情连接-->
+<div class="mw1000 link">
+  <ul>
+  	  	<li class="wu"><a href="/chiefly.html?hcs=11" target="_blank">北京画院美术馆</a></li>
+  	  	<li><a href="/chiefly.html?hcs=125" target="_blank">齐白石艺术国际研究中心</a></li>
+  	  	<li><a href="/chiefly.html?hcs=73" target="_blank">传统中国绘画研究中心</a></li>
+  	  	<li><a href="/chiefly.html?hcs=136" target="_blank">齐白石旧居纪念馆</a></li>
+  	  </ul>
+</div>
+<!--线-->
+
+<div class="line"></div>
+
+<!--底部-->
+
+<div class="mw1000 footer">
+	<div class="share" style="width:200px;"><!-- JiaThis Button BEGIN -->
+		<div class="jiathis_style_24x24"> <a class="jiathis_button_tsina"></a> <a class="jiathis_button_weixin"></a> <a class="jiathis_button_cqq"></a> <a class="jiathis_button_tqq"></a> </div>
+		<script type="text/javascript" src="static/js/jia.js" charset="utf-8"></script> 
+		
+		<!-- JiaThis Button END -->
+		
+		<div><a style="opacity:1;filter:alpha(opacity=1);margin:5px 0px 0px 150px;" href="/block.html?hcs=1&clg=206" target="_blank">友情链接</a></div>
+	</div>
+	版权所有 北京画院 <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备11047018号 </a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502031011" style="text-decoration:none;height:20px;line-height:20px;"><img src="static/picture/gongan.png" />京公网安备 11010502031011</a> | <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502055464" style="text-decoration:none;height:20px;line-height:20px;"><img src="static/picture/gongan.png" alt=""/>京公网安备 11010502055464</a><br />
+	技术支持由雅昌艺术网提供
+</div>
+<script type="text/javascript">
+var _mvq = _mvq || [];
+_mvq.push(['$setAccount', 'm-28447-0']);
+
+
+_mvq.push(['$setGeneral', '', '', /*用户名*/ '', /*用户id*/ '']);//如果不传用户名、用户id，此句可以删掉
+_mvq.push(['$logConversion']);
+(function() {
+	var mvl = document.createElement('script');
+	mvl.type = 'text/javascript'; mvl.async = true;
+	mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(mvl, s); 
+})();	
+
+</script> 
+<!-- bjaa.com.cn Baidu tongji analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?671256d6f3da3efa8900fdbe740ea34b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa36536cd7a1197873eb11daa7d573883' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+$(function(){
+	$('ul li a').attr('target','_blank');	
+	$('.nav ul li a').attr('target','_self');
+	$('.sidebar ul li a').attr('target','_self');
+	$('.painter_a dl dd a').attr('target','_blank');	
+	$('ul li a.qbsjp').attr('target','_blank');
+})
+</script>
+<script type="text/javascript">
+let _aas = {
+  'debug': true,
+  'id': '1557929761234543248',
+  'api': 'https://www.bjaa.com.cn/aas'
+}
+
+window._aas = _aas;
+(function () {
+  let ac = document.createElement('script')
+  ac.src = 'https://www.bjaa.com.cn/aas/js/1.0/count.js'
+  let s = document.getElementsByTagName('script')[0]
+  s.parentNode.insertBefore(ac, s)
+})()
+</script>
+</body></html>
